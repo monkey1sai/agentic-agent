@@ -1,0 +1,9 @@
+.gitnexus
+.venv/
+__pycache__/
+*.pyc
+artifacts/
+reports/
+.claude/
+CLAUDE.md
+

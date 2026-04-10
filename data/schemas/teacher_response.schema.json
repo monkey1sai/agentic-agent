@@ -1,0 +1,67 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "TeacherResponse",
+  "type": "object",
+  "required": [
+    "task_summary",
+    "task_type",
+    "assumptions",
+    "plan",
+    "steps",
+    "final_output",
+    "quality_checks"
+  ],
+  "properties": {
+    "task_summary": {"type": "string"},
+    "task_type": {"type": "string"},
+    "assumptions": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "plan": {
+      "type": "array",
+      "items": {"type": "string"}
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "step_id",
+          "goal",
+          "thought_summary",
+          "action_type",
+          "action_input",
+          "expected_observation",
+          "actual_observation",
+          "decision",
+          "produced_artifact"
+        ],
+        "properties": {
+          "step_id": {"type": "integer"},
+          "goal": {"type": "string"},
+          "thought_summary": {"type": "string"},
+          "action_type": {"type": "string"},
+          "action_input": {"type": "string"},
+          "expected_observation": {"type": "string"},
+          "actual_observation": {"type": "string"},
+          "decision": {"type": "string"},
+          "produced_artifact": {"type": "string"}
+        }
+      }
+    },
+    "final_output": {
+      "type": "object",
+      "required": ["answer", "artifact_summary", "stop_reason"],
+      "properties": {
+        "answer": {"type": "string"},
+        "artifact_summary": {"type": "string"},
+        "stop_reason": {"type": "string"}
+      }
+    },
+    "quality_checks": {
+      "type": "array",
+      "items": {"type": "string"}
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "sample_id": "task_demo_001::teacher::0001",
+  "task": {
+    "instruction": "建立一個可把教師模型輸出轉成 agentic 訓練資料的最小 Python 管線。",
+    "context": {
+      "workspace_files": [
+        "cluster_data.py",
+        "meth.example.json",
+        "teacher.md",
+        "teacher_api.md"
+      ],
+      "language": "python",
+      "runtime": "python3"
+    },
+    "constraints": [
+      "優先使用標準函式庫",
+      "輸出 JSONL 訓練資料",
+      "保留教師原始回應以供追查"
+    ],
+    "expected_artifact": [
+      "src/main_generate_dataset.py",
+      "prompts/teacher_agentic.md",
+      "examples/agentic_sample.example.json"
+    ]
+  },
+  "teacher_plan": {
+    "task_summary": "將教師模型回應正規化成可訓練的 agentic JSONL。",
+    "task_type": "data-pipeline",
+    "assumptions": [
+      "Gemma 4 API 與 OpenAI chat completion 相容"
+    ],
+    "plan": [
+      "定義輸出 schema",
+      "建立 prompt 模板",
+      "解析教師 JSON",
+      "驗證與輸出 JSONL"
+    ]
+  },
+  "steps": [
+    {
+      "step_id": 1,
+      "goal": "建立教師輸出格式",
+      "thought_summary": "先固定欄位才能讓後處理穩定。",
+      "action_type": "edit",
+      "action_input": "建立 teacher_agentic prompt 與 schema",
+      "expected_observation": "教師模型會穩定輸出合法 JSON",
+      "actual_observation": "欄位已固定為 summary, plan, steps, final_output",
+      "decision": "接著實作 JSON 解析與驗證",
+      "produced_artifact": "prompts/teacher_agentic.md, schema files"
+    }
+  ],
+  "final_output": {
+    "answer": "已建立最小資料生成管線，可將教師輸出轉成 agentic JSONL。",
+    "artifact_summary": "包含 prompt、解析器、驗證器與 CLI 入口",
+    "stop_reason": "流程已可處理單筆或批次任務"
+  },
+  "metadata": {
+    "teacher_model": "gemma-4-26B-A4B-it-Q8_0.gguf",
+    "prompt_version": "teacher_agentic_v1",
+    "quality_score": 0.93,
+    "validation_errors": []
+  }
+}

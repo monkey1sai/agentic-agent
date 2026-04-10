@@ -1,0 +1,24 @@
+{
+  "task_id": "task_demo_001",
+  "instruction": "建立一個可把教師模型輸出轉成 agentic 訓練資料的最小 Python 管線。",
+  "context": {
+    "workspace_files": [
+      "cluster_data.py",
+      "meth.example.json",
+      "teacher.md",
+      "teacher_api.md"
+    ],
+    "language": "python",
+    "runtime": "python3"
+  },
+  "constraints": [
+    "優先使用標準函式庫",
+    "輸出 JSONL 訓練資料",
+    "保留教師原始回應以供追查"
+  ],
+  "expected_artifact": [
+    "src/main_generate_dataset.py",
+    "prompts/teacher_agentic.md",
+    "examples/agentic_sample.example.json"
+  ]
+}

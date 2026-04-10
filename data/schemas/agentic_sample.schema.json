@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AgenticTrainingSample",
+  "type": "object",
+  "required": [
+    "sample_id",
+    "task",
+    "teacher_plan",
+    "steps",
+    "final_output",
+    "metadata"
+  ],
+  "properties": {
+    "sample_id": {"type": "string"},
+    "task": {"type": "object"},
+    "teacher_plan": {
+      "type": "object",
+      "required": ["task_summary", "task_type", "assumptions", "plan"],
+      "properties": {
+        "task_summary": {"type": "string"},
+        "task_type": {"type": "string"},
+        "assumptions": {"type": "array", "items": {"type": "string"}},
+        "plan": {"type": "array", "items": {"type": "string"}}
+      }
+    },
+    "steps": {
+      "type": "array",
+      "items": {"type": "object"}
+    },
+    "final_output": {
+      "type": "object",
+      "required": ["answer", "artifact_summary", "stop_reason"],
+      "properties": {
+        "answer": {"type": "string"},
+        "artifact_summary": {"type": "string"},
+        "stop_reason": {"type": "string"}
+      }
+    },
+    "metadata": {
+      "type": "object",
+      "required": ["teacher_model", "prompt_version", "quality_score", "validation_errors"],
+      "properties": {
+        "teacher_model": {"type": "string"},
+        "prompt_version": {"type": "string"},
+        "quality_score": {"type": "number"},
+        "validation_errors": {
+          "type": "array",
+          "items": {"type": "string"}
+        }
+      }
+    }
+  }
+}

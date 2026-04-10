@@ -1,0 +1,48 @@
+{
+  "task_summary": "建立將教師輸出正規化為 agentic JSONL 的最小資料管線。",
+  "task_type": "data-pipeline",
+  "assumptions": [
+    "輸入任務會提供 instruction、context、constraints",
+    "教師模型輸出可被限制為單一 JSON 物件"
+  ],
+  "plan": [
+    "建立 prompt 模板",
+    "呼叫 Gemma API",
+    "抽取 JSON 並正規化欄位",
+    "驗證與輸出 processed JSONL"
+  ],
+  "steps": [
+    {
+      "step_id": 1,
+      "goal": "定義教師輸出契約",
+      "thought_summary": "先固定 JSON 結構，後續解析才不會脆弱。",
+      "action_type": "edit",
+      "action_input": "撰寫 teacher_agentic prompt 與 schema",
+      "expected_observation": "教師輸出欄位一致",
+      "actual_observation": "輸出欄位已固定為 task_summary、plan、steps、final_output",
+      "decision": "接著實作 API client 與 response extractor",
+      "produced_artifact": "prompts/teacher_agentic.md, data/schemas/*.json"
+    },
+    {
+      "step_id": 2,
+      "goal": "組出最小可跑資料管線",
+      "thought_summary": "將輸入任務、教師回應、驗證和 JSONL 輸出串成單一路徑。",
+      "action_type": "edit",
+      "action_input": "實作 main_generate_dataset.py 與 supporting modules",
+      "expected_observation": "可用 dry-run 驗證請求，並可用 mock response 驗證後處理",
+      "actual_observation": "CLI 已支援 dry-run 與 response-file 模式",
+      "decision": "可開始批次生成訓練資料",
+      "produced_artifact": "src/*.py"
+    }
+  ],
+  "final_output": {
+    "answer": "已建立可把教師模型回應轉為 agentic 訓練資料的最小 Python 管線。",
+    "artifact_summary": "包含 prompt、schema、API client、parser、validator 與 dataset CLI",
+    "stop_reason": "流程已可在 API 或 mock response 模式下執行"
+  },
+  "quality_checks": [
+    "確認步驟至少一筆",
+    "確認 final_output 欄位完整",
+    "確認輸出可寫入 raw 與 processed JSONL"
+  ]
+}

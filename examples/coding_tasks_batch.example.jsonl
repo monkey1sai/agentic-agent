@@ -1,0 +1,32 @@
+{"task_id":"coding_001","instruction":"寫一個函數求無重複字符最長子串長度，例如 abcabcbb 返回 3","context":{"language":"Python","snippet":""},"constraints":["時間複雜度 O(n)","空間複雜度 O(min(m, n))"],"expected_artifact":["函數定義","單行解說"],"domain":"coding"}
+{"task_id":"coding_002","instruction":"實現計算列表平均值的函數","context":{"language":"Python","snippet":""},"constraints":["處理空列表"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_003","instruction":"寫一個檢查括號匹配的函數","context":{"language":"Python","snippet":""},"constraints":["支持 (), [], {}","無效字符返回 False"],"expected_artifact":["函數定義","測試用例"],"domain":"coding"}
+{"task_id":"coding_004","instruction":"實現二分搜尋查找目標位置","context":{"language":"Python","snippet":""},"constraints":["有序升序陣列","找不到返回 -1"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_005","instruction":"寫合並兩個有序列表的函數","context":{"language":"Python","snippet":""},"constraints":["保持有序","時間複雜度 O(n+m)"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_006","instruction":"實現反轉字符串的函數","context":{"language":"Python","snippet":""},"constraints":["原地修改（如可能）","支持 Unicode"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_007","instruction":"寫一個去重的函數","context":{"language":"Python","snippet":""},"constraints":["保留順序","支持任意可雜湊物件"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_008","instruction":"實現求階乘的函數","context":{"language":"Python","snippet":""},"constraints":["支持大數值","負數返回 None"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_009","instruction":"寫一個 two sum 函數，返回兩個索引","context":{"language":"Python","snippet":""},"constraints":["若無答案返回空列表","時間複雜度 O(n)"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_010","instruction":"判斷字符串是否為回文","context":{"language":"Python","snippet":""},"constraints":["區分大小寫","只處理一般字串"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_011","instruction":"實現 Fibonacci 第 n 項函數","context":{"language":"Python","snippet":""},"constraints":["n 小於 0 返回 None","避免遞迴爆炸"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_012","instruction":"計算句子中每個單詞出現次數","context":{"language":"Python","snippet":""},"constraints":["以空白切詞","回傳 dict"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_013","instruction":"將巢狀 list 扁平化成一維 list","context":{"language":"Python","snippet":""},"constraints":["支援任意巢狀深度"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_014","instruction":"檢查列表中的元素是否全部唯一","context":{"language":"Python","snippet":""},"constraints":["回傳布林值"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_015","instruction":"寫一個函數找出列表中的最大值","context":{"language":"Python","snippet":""},"constraints":["空列表返回 None"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_016","instruction":"寫一個函數找出列表中的最小值","context":{"language":"Python","snippet":""},"constraints":["空列表返回 None"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_017","instruction":"寫一個函數計算列表總和","context":{"language":"Python","snippet":""},"constraints":["空列表回傳 0"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_018","instruction":"寫一個函數把攝氏溫度轉成華氏溫度","context":{"language":"Python","snippet":""},"constraints":["回傳 float"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_019","instruction":"寫一個函數判斷整數是否為偶數","context":{"language":"Python","snippet":""},"constraints":["回傳布林值"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_020","instruction":"寫一個函數判斷整數是否為質數","context":{"language":"Python","snippet":""},"constraints":["n 小於 2 返回 False"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_021","instruction":"寫一個函數把字串中的空白改成底線","context":{"language":"Python","snippet":""},"constraints":["保留其他字元"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_022","instruction":"寫一個函數統計元音字母數量","context":{"language":"Python","snippet":""},"constraints":["只計算 aeiou 大小寫"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_023","instruction":"寫一個函數回傳列表中第二大的數","context":{"language":"Python","snippet":""},"constraints":["若不足兩個不同值返回 None"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_024","instruction":"寫一個函數計算兩個字串的共同前綴","context":{"language":"Python","snippet":""},"constraints":["回傳最長共同前綴"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_025","instruction":"寫一個函數將字串中的單詞順序反轉","context":{"language":"Python","snippet":""},"constraints":["單詞以空白分隔"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_026","instruction":"寫一個函數檢查兩個字串是否為 anagram","context":{"language":"Python","snippet":""},"constraints":["區分大小寫"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_027","instruction":"寫一個函數移除列表中的 None 值","context":{"language":"Python","snippet":""},"constraints":["保留原順序"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_028","instruction":"寫一個函數計算字串中每個字符的出現次數","context":{"language":"Python","snippet":""},"constraints":["回傳 dict"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_029","instruction":"寫一個函數判斷列表是否已排序","context":{"language":"Python","snippet":""},"constraints":["升序視為排序"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_030","instruction":"寫一個函數把整數列表中的每個元素平方","context":{"language":"Python","snippet":""},"constraints":["回傳新列表"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_031","instruction":"寫一個函數找出列表中的缺失數字","context":{"language":"Python","snippet":""},"constraints":["輸入為 0 到 n 中缺一個的列表"],"expected_artifact":["函數定義"],"domain":"coding"}
+{"task_id":"coding_032","instruction":"寫一個函數合併兩個 dict，後者覆蓋前者同名鍵","context":{"language":"Python","snippet":""},"constraints":["回傳新 dict"],"expected_artifact":["函數定義"],"domain":"coding"}

@@ -1,0 +1,22 @@
+{
+  "sample_id": "code_fix_001::sft::0001",
+  "messages": [
+    {
+      "role": "system",
+      "content": "你是專注於 coding 任務的助理，請直接給出正確、簡潔且可執行的最終答案。"
+    },
+    {
+      "role": "user",
+      "content": "任務: 修正 Python 函式中的 off-by-one bug，並加上一個最小測試。\n\n語言: python\n程式碼:\ndef sum_prefix(nums, n):\n    return sum(nums[:n+1])\n\n限制:\n- 不要引入第三方套件\n- 維持函式名稱不變"
+    },
+    {
+      "role": "assistant",
+      "content": "def sum_prefix(nums, n):\n    return sum(nums[:n])\n\n\ndef test_sum_prefix():\n    assert sum_prefix([1, 2, 3], 2) == 3"
+    }
+  ],
+  "metadata": {
+    "domain": "coding",
+    "source": "agentic_teacher",
+    "format": "chat-sft"
+  }
+}

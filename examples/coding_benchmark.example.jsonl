@@ -1,0 +1,2 @@
+{"benchmark_id":"bench_code_001","instruction":"撰寫一個函式，回傳字串中最長不重複子字串的長度。","domain":"coding","reference":{"type":"unit-tests","tests":[{"input":"abcabcbb","expected":3},{"input":"bbbbb","expected":1},{"input":"pwwkew","expected":3}]}}
+{"benchmark_id":"bench_code_002","instruction":"修正一個會在空陣列時拋出錯誤的 Python 平均值函式。","domain":"coding","reference":{"type":"contains","must_include":["if not nums"],"must_not_include":["ZeroDivisionError"]}}

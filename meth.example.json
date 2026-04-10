@@ -1,0 +1,11 @@
+{
+  "problem": "求满足 x² + 3x + 2 = 0 的x值",
+  "solution_steps": ["移项", "因式分解", "求根"],
+  "answer": "x = -1 或 x = -2",
+  "skill_labels": {
+    "structure": "二次方程求解",
+    "action": ["识别二次项系数", "应用因式分解", "求两个根"],
+    "effect": "得到方程的所有实根",
+    "tool": "代数求解器"
+  }
+}
